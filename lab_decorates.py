@@ -23,4 +23,4 @@ def decorator(x: str):
 
 
 decorator_arguments = document_it(decorator)
-decorator_arguments("de")
+decorator_arguments("dea")
