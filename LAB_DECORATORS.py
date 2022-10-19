@@ -31,13 +31,13 @@ def checkArgument(fun) :
     def wrapper (*args , **kwargs ):
         print(args)
         for i in args:
-            if isinstance(i,  str ): #and len(i) > 5 :
-
+            if isinstance(i,  str ) and len(i) > 5 :
                argumentli =(len(args))
-               if argumentli >= 5 :
-                    return argumentli
-               else :
-                    return False   
+               #if argumentli == 5 :
+               return True
+            else :
+
+               return False   
         return fun(*args , **kwargs)
     
     return wrapper
@@ -50,14 +50,16 @@ def greet(name):
     b= "wwlcome "
     c= "to"
     d= " the"
-    f= "woord "
     e= "woord "
     
 
 n = greet("mahaaaa")
 print(" The number of arguments are 5 or more ? : ", n)
 
-
+try:
+     greet(name)
+except ValueError as e:
+    print(e)
 
 
 
